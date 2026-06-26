@@ -1,438 +1,406 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#222;
 }
 
-/* PORTADA */
-.hero {
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, .60), rgba(0, 0, 0, .60)), url("imagenes/portada.jpeg");
-    background-size: cover;
-    background-position: center;
+img{
+    max-width:100%;
+    display:block;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 60px;
+a{
+    text-decoration:none;
 }
 
-.logo-menu {
-    width: 75px;
-    border-radius: 15px;
-    transition: .3s;
+/* ================= PORTADA ================= */
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("imagenes/portada.jpeg");
+
+    background-size:cover;
+    background-position:center;
 }
 
-.logo-menu:hover {
-    transform: scale(1.1);
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 60px;
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(5px);
 }
 
-nav ul {
-    display: flex;
-    gap: 30px;
-    list-style: none;
+.logo-menu{
+    width:75px;
+    border-radius:15px;
+    transition:.3s;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: .3s;
+.logo-menu:hover{
+    transform:scale(1.08);
 }
 
-nav a:hover {
-    color: #5ab0ff;
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
 }
 
-.hero-contenido {
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+nav ul li a{
+    color:white;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.hero-contenido h1 {
-    font-size: 80px;
-    letter-spacing: 5px;
+nav ul li a:hover{
+    color:#5ab0ff;
 }
 
-.hero-contenido p {
-    font-size: 28px;
-    margin-top: 15px;
+.hero-contenido{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
 }
 
-/* NOSOTROS */
-.nosotros {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    padding: 100px 80px;
-    background: #f4f4f4;
+.hero-contenido h1{
+    font-size:80px;
+    letter-spacing:4px;
+    margin-bottom:20px;
 }
 
-.texto-nosotros {
-    max-width: 600px;
+.hero-contenido p{
+    font-size:28px;
+    max-width:750px;
+    margin-bottom:35px;
 }
-
-.texto-nosotros h2 {
-    font-size: 50px;
-    margin-bottom: 20px;
-}
-
-.texto-nosotros p {
-    font-size: 22px;
-    line-height: 1.8;
-}
-
-.imagen-nosotros img {
-    width: 500px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-}
-
-/* ELEGIRNOS */
-.elegirnos {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 100px 80px;
-}
-
-.elegirnos h2 {
-    font-size: 50px;
-    margin-bottom: 50px;
-}
-
-.estadisticas {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    margin-bottom: 50px;
-}
-
-.dato {
-    background: #1e1e1e;
-    padding: 30px;
-    border-radius: 20px;
-    min-width: 220px;
-}
-
-.dato h3 {
-    color: #5ab0ff;
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-.dato p {
-    font-size: 18px;
-}
-
-.beneficios {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.beneficios div {
-    background: #1e1e1e;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-/* SERVICIOS */
-.servicios {
-    background: white;
-    padding: 100px 80px;
-    text-align: center;
-}
-
-.servicios h2 {
-    font-size: 50px;
-    margin-bottom: 50px;
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.card {
-    width: 300px;
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .15);
-    transition: .3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card h3 {
-    margin-bottom: 15px;
-    color: #5ab0ff;
-}
-
-/* GALERIA */
-.galeria {
-    padding: 100px 80px;
-    background: #f7f7f7;
-}
-
-.galeria h2 {
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: 40px;
-}
-
-.grid-galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.grid-galeria img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 20px;
-    transition: .4s;
-}
-
-.grid-galeria img:hover {
-    transform: scale(1.04);
-}
-
-/* CATERING */
-.catering {
-    background: white;
-    text-align: center;
-    padding: 100px 80px;
-}
-
-.catering h2 {
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-
-.foto-catering {
-    width: 90%;
-    max-width: 1000px;
-    border-radius: 25px;
-    margin-bottom: 30px;
-}
-
-.catering p {
-    max-width: 900px;
-    margin: auto;
-    line-height: 1.8;
-    font-size: 20px;
-}
-
-/* CONTACTO */
-.contacto {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 100px 80px;
-}
-
-.contacto h2 {
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-
-.redes {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin: 30px 0;
-}
-
-.redes img {
-    width: 70px;
-    height: 70px;
-    transition: .3s;
-}
-
-.redes img:hover {
-    transform: scale(1.15);
-}
-
-/* FOOTER */
-.footer {
-    background: #000;
-    color: white;
-    text-align: center;
-    padding: 30px;
-}
-
-.footer h3 {
-    margin-bottom: 10px;
-}
-
-/* WHATSAPP FLOTANTE */
-.whatsapp-flotante {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    z-index: 999;
-}
-
-.whatsapp-flotante img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
-    transition: .3s;
-}
-
-.whatsapp-flotante img:hover {
-    transform: scale(1.15);
-}
-
-/* BOTON PRINCIPAL */
 
 .boton-principal{
-    display:inline-block;
-    margin-top:30px;
-    padding:15px 35px;
     background:#5ab0ff;
     color:white;
-    text-decoration:none;
-    border-radius:10px;
+    padding:16px 35px;
+    border-radius:12px;
     font-weight:bold;
     transition:.3s;
 }
 
 .boton-principal:hover{
-    background:#2d8be0;
-    transform:scale(1.05);
+    background:#2389e8;
+    transform:translateY(-3px);
 }
 
-/* IDIOMA */
+/* ================= NOSOTROS ================= */
 
-.idioma{
+.nosotros{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:70px;
+    padding:100px 80px;
+    background:#f4f4f4;
+}
+
+.texto-nosotros{
+    max-width:600px;
+}
+
+.texto-nosotros h2{
+    font-size:50px;
+    margin-bottom:25px;
+}
+
+.texto-nosotros p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+.imagen-nosotros img{
+    width:500px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+/* ================= ELEGIRNOS ================= */
+
+.elegirnos{
+    background:#111;
     color:white;
-    font-weight:bold;
+    padding:100px 80px;
+    text-align:center;
 }
 
-.idioma a{
-    color:white;
-    text-decoration:none;
+.elegirnos h2{
+    font-size:50px;
+    margin-bottom:50px;
 }
 
-.idioma a:hover{
+.estadisticas{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+    margin-bottom:50px;
+}
+
+.dato{
+    background:#1c1c1c;
+    padding:30px;
+    border-radius:20px;
+    min-width:220px;
+}
+
+.dato h3{
+    font-size:50px;
     color:#5ab0ff;
+    margin-bottom:10px;
 }
 
-/* UBICACION */
+.beneficios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.beneficios div{
+    background:#1f1f1f;
+    padding:20px;
+    border-radius:15px;
+}
+
+/* ================= SERVICIOS ================= */
+
+.servicios{
+    padding:100px 80px;
+    background:white;
+    text-align:center;
+}
+
+.servicios h2{
+    font-size:50px;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.card{
+    width:300px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#5ab0ff;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+/* ================= GALERIA ================= */
+
+.galeria{
+    background:#f7f7f7;
+    padding:100px 80px;
+}
+
+.galeria h2{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:45px;
+}
+
+.grid-galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.grid-galeria img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.grid-galeria img:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* ================= CATERING ================= */
+
+.catering{
+    padding:100px 80px;
+    background:white;
+    text-align:center;
+}
+
+.catering h2{
+    font-size:50px;
+    margin-bottom:35px;
+}
+
+.foto-catering{
+    width:100%;
+    max-width:950px;
+    margin:auto;
+    border-radius:20px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.20);
+}
+
+.catering p{
+    max-width:900px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* ================= UBICACION ================= */
 
 .ubicacion{
-    background:#f5f5f5;
+    background:#f4f4f4;
+    padding:100px 80px;
     text-align:center;
-    padding:90px 40px;
 }
 
 .ubicacion h2{
-    font-size:45px;
+    font-size:50px;
     margin-bottom:20px;
 }
 
 .ubicacion p{
     font-size:20px;
-    margin-bottom:35px;
+    margin-bottom:30px;
 }
 
 .boton-maps{
     display:inline-block;
     background:#5ab0ff;
     color:white;
-    text-decoration:none;
     padding:15px 35px;
     border-radius:12px;
+    font-weight:bold;
     transition:.3s;
+    margin-bottom:40px;
 }
 
 .boton-maps:hover{
-    background:#2d8be0;
-    transform:scale(1.05);
+    background:#2389e8;
+    transform:translateY(-3px);
 }
 
-/* FORMULARIO */
+/* ================= CONTACTO ================= */
 
-.formulario-contacto{
-    padding:90px 40px;
-    background:white;
+.contacto{
+    background:#111;
+    color:white;
+    padding:100px 80px;
     text-align:center;
 }
 
-.formulario-contacto h2{
-    font-size:45px;
-    margin-bottom:35px;
+.contacto h2{
+    font-size:50px;
+    margin-bottom:40px;
 }
 
-.formulario-contacto form{
+.formulario{
     max-width:700px;
-    margin:auto;
+    margin:0 auto 50px;
     display:flex;
     flex-direction:column;
-    gap:18px;
+    gap:20px;
 }
 
-.formulario-contacto input,
-.formulario-contacto textarea{
+.formulario input,
+.formulario textarea{
     padding:15px;
-    border:1px solid #ccc;
+    border:none;
     border-radius:10px;
     font-size:16px;
 }
 
-.formulario-contacto button{
-    padding:15px;
+.formulario textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+.formulario button{
     background:#5ab0ff;
     color:white;
     border:none;
+    padding:15px;
     border-radius:10px;
+    font-size:18px;
     cursor:pointer;
     transition:.3s;
 }
 
-.formulario-contacto button:hover{
-    background:#2d8be0;
+.formulario button:hover{
+    background:#2389e8;
 }
 
-/* TERMINOS */
+.redes{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+.redes img{
+    width:70px;
+    transition:.3s;
+}
+
+.redes img:hover{
+    transform:scale(1.15);
+}
+
+/* ================= TERMINOS ================= */
 
 .terminos{
     background:#f7f7f7;
-    padding:80px 40px;
+    padding:80px;
     text-align:center;
 }
 
 .terminos h2{
-    font-size:40px;
+    font-size:45px;
     margin-bottom:25px;
 }
 
@@ -443,34 +411,86 @@ nav a:hover {
     font-size:18px;
 }
 
-/* RESPONSIVE */
+/* ================= FOOTER ================= */
+
+.footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:35px;
+}
+
+.footer h3{
+    margin-bottom:10px;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-flotante{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+}
+
+.whatsapp-flotante img{
+    width:70px;
+    border-radius:50%;
+    box-shadow:0 5px 15px rgba(0,0,0,.35);
+    transition:.3s;
+}
+
+.whatsapp-flotante img:hover{
+    transform:scale(1.15);
+}
+
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:900px){
 
     nav{
         flex-direction:column;
         gap:20px;
+        padding:20px;
     }
 
     nav ul{
         flex-wrap:wrap;
         justify-content:center;
+        gap:15px;
     }
 
     .hero-contenido h1{
-        font-size:50px;
+        font-size:45px;
     }
 
     .hero-contenido p{
-        font-size:22px;
+        font-size:20px;
     }
 
     .nosotros{
         flex-direction:column;
+        padding:70px 30px;
     }
 
     .imagen-nosotros img{
         width:100%;
+    }
+
+    .servicios,
+    .galeria,
+    .catering,
+    .ubicacion,
+    .contacto,
+    .terminos{
+        padding:70px 25px;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    .grid-galeria{
+        grid-template-columns:1fr;
     }
 
 }
